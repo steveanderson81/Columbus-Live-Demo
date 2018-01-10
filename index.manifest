@@ -1,0 +1,27 @@
+CACHE MANIFEST
+CACHE:
+# Version 1.0
+# HTML
+index.html
+
+# JavaScript
+jquery.min.js
+
+# CSS
+styles.css
+normalize.css
+
+# Images
+touch-icon-ipad.png
+touch-icon-ipad-retina.png
+touch-icon-iphone.png
+touch-icon-iphone-retina.png
+favicon.ico
+
+# Fonts
+Ubuntu-Regular.woff
+Ubuntu-Medium.woff
+
+
+NETWORK:
+*
