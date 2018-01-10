@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" manifest="index.manifest">
+<head>
+<script src="jquery.min.js"></script>
+<script>
+!function(t){"use strict";t.fn.fitVids=function(e){var i={customSelector:null,ignore:null};if(!document.getElementById("fit-vids-style")){var r=document.head||document.getElementsByTagName("head")[0],a=document.createElement("div");a.innerHTML='<p>x</p><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style>',r.appendChild(a.childNodes[1])}return e&&t.extend(i,e),this.each(function(){var e=['iframe[src*="player.vimeo.com"]','iframe[src*="youtube.com"]','iframe[src*="youtube-nocookie.com"]','iframe[src*="kickstarter.com"][src*="video.html"]',"object","embed"];i.customSelector&&e.push(i.customSelector);var r=".fitvidsignore";i.ignore&&(r=r+", "+i.ignore);var a=t(this).find(e.join(","));(a=(a=a.not("object object")).not(r)).each(function(){var e=t(this);if(!(e.parents(r).length>0||"embed"===this.tagName.toLowerCase()&&e.parent("object").length||e.parent(".fluid-width-video-wrapper").length)){e.css("height")||e.css("width")||!isNaN(e.attr("height"))&&!isNaN(e.attr("width"))||(e.attr("height",9),e.attr("width",16));var i=("object"===this.tagName.toLowerCase()||e.attr("height")&&!isNaN(parseInt(e.attr("height"),10))?parseInt(e.attr("height"),10):e.height())/(isNaN(parseInt(e.attr("width"),10))?e.width():parseInt(e.attr("width"),10));if(!e.attr("name")){var a="fitvid"+t.fn.fitVids._count;e.attr("name",a),t.fn.fitVids._count++}e.wrap('<div class="fluid-width-video-wrapper"></div>').parent(".fluid-width-video-wrapper").css("padding-top",100*i+"%"),e.removeAttr("height").removeAttr("width")}})})},t.fn.fitVids._count=0}(window.jQuery||window.Zepto);
+</script>
+<script>
+  $(document).ready(function(){
+    $(".videoWrapper").fitVids();
+  });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+	if(navigator.onLine===false) {
+		document.getElementById('video1').style.display="none";
+        document.getElementById('video2').style.display="none";
+		document.getElementById('offlineMessage').style.display="block";
+	}
+});
+</script>
+
+<!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta charset="utf-8">
+<title>ImageTrend Elite</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- iOS Homescreen Icon
+  ------------------------------------------ -->
+<link rel="apple-touch-icon" href="touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">	
+
+
+<!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="styles.css">
+
+<!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+<!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+  <div class="row">
+    <div class="columns blueBG twelve">
+      <div id="logoWrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="266 14 237.659 31.776">
+          <defs>
+            <style>
+			.a,.b{fill:#fff;}.b{font-size:7px;font-family:Arial-BoldMT, Arial;font-weight:700;}
+		  </style>
+          </defs>
+          <g transform="translate(-486.261 -518.024)">
+            <path class="a" d="M5.711,34.829H0V4.2H5.711Z" transform="translate(752.261 528.404)"/>
+            <path class="a" d="M109.516,77.139h-4.425l-1.659-17.354L95.4,77.139h-.47L86.963,59.688,85.3,77.153H81.1L83.7,53.3h4.522l7.121,15.667L102.367,53.3h4.453Z" transform="translate(682.375 486.094)"/>
+            <path class="a" d="M313.813,68.276l3.415-8.988c.1-.3.138-.442.373-1.217.207.747.235.885.373,1.286l3.208,8.919Zm6.14-14.976h-4.328L306,77.139h4.453l2.268-5.932h9.486l2.2,5.932h4.826Z" transform="translate(488.574 486.094)"/>
+            <path class="a" d="M509.084,71.861a20.657,20.657,0,0,1-9.279,2.226c-7.951,0-13.206-5.033-13.206-12.362,0-6.983,5.282-12.625,13.856-12.625a23.046,23.046,0,0,1,7.356,1.272v4.135a13.755,13.755,0,0,0-7.038-2.06c-5.517,0-9.541,3.775-9.541,9.223,0,5.116,3.526,9.223,9.03,9.223a9.268,9.268,0,0,0,4.632-1.079l.1-5.448h-6.126l1.991-3.277h8.435Z" transform="translate(332.947 489.713)"/>
+            <path class="a" d="M700.437,77.139H686.9V53.3h13.939v3.388h-9.555v6.347h8.241v3.388h-8.241v7.315H702.4Z" transform="translate(160.344 486.094)"/>
+            <path class="a" d="M834.089,31.21H828.42l7.218-26.951H826L827.148,0H851.54l-1.148,4.259h-9.071Z" transform="translate(40.479 532.024)"/>
+            <path class="a" d="M981.952,66.492l2.7-9.97h2.06c2.3,0,4.453.774,4.453,3.319,0,1.659-1.355,4.052-5.172,4.052a8.562,8.562,0,0,1-1.051-.069Zm7.771-.166a9.173,9.173,0,0,0,3-1.424,6.82,6.82,0,0,0,2.835-5.407c0-4.425-3.678-6.195-7.688-6.195h-6.624L974.9,77.139h4.19l2.807-10.3a12.088,12.088,0,0,0,1.756.1c.636,0,1.521-.069,1.964-.1l4.052,10.3h4.453Z" transform="translate(-87.831 486.094)"/>
+            <path class="a" d="M1159.264,73.862l-3.18,3.277H1142.2l6.416-23.839h14.09l-.9,3.277h-9.735l-1.756,6.568h8.449l-.885,3.222h-8.407l-2.033,7.495Z" transform="translate(-231.997 486.094)"/>
+            <path class="a" d="M1317.186,53.3l-6.457,23.964h-1.66l-10.426-18.7-4.9,18.571H1289.6l6.416-23.839h4.162l8.753,16.11,4.19-16.109h4.065Z" transform="translate(-359.015 486.094)"/>
+            <path class="a" d="M1493.418,56.577h2.973c4.452,0,6.748,1.853,6.748,6.306a12.054,12.054,0,0,1-3.346,8.532c-2.5,2.323-5.31,2.5-7.605,2.5h-3.443ZM1483.6,77.139h8.573c3.65,0,7.4-.277,10.813-3.388a15.257,15.257,0,0,0,4.535-10.938c0-6.07-3.858-9.514-10.039-9.514h-7.495Z" transform="translate(-526.189 486.094)"/>
+            <text class="b" transform="translate(983.92 543.578)">
+              <tspan x="0" y="0">®</tspan>
+            </text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="row line">
+    <div class="twelve columns whiteBG">
+      <p class="centerVertical">Welcome to ImageTrend Elite. Below you'll find resources to get you started and a link to Elite Web and Elite Field. Please <a href="https://support.imagetrend.com/supportdesk/index.php?/Core/Default/Index">contact</a> ImageTrend with any questions or call 1-888-730-3255. </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="six columns">
+		<a href="https://columbus.imagetrendelite.com/Elite/Organizationcolumbus/"><button>Elite Web Login</button></a>
+    </div>
+    <div class="six columns">
+		<a href="https://columbus.imagetrendelite.com/Elite/Organizationcolumbus/RunForm/Login"><button>Elite Field Login</button></a>
+    </div>
+  </div>
+  <div class="row" id="offlineMessage" style="display: none;margin-top: 5em;">
+    <div class="twelve columns">
+      <p>You need to be online to view video content.</p>
+    </div>
+  </div>
+  <div id="video1" class="row">
+    <div class="twelve columns videoWrapper">
+      <iframe src="https://player.vimeo.com/video/250282675" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+    </div>
+  </div>
+  <div id="video2" class="row">
+    <div class="twelve columns videoWrapper">
+      <iframe src="https://player.vimeo.com/video/250302366" width="640" height="399" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
